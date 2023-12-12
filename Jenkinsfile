@@ -4,6 +4,9 @@ pipeline{
         git 'Default'
         maven 'maven'
     }
+     triggers{
+        githubPush()
+    }
     stages{
         stage("build"){
             steps{
